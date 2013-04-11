@@ -21,3 +21,5 @@
       %td.assignee
         - if issue.assignee
           %img{ src: gravatar_for(issue.assignee.gravatar_id) }
+
+= haml '_footer'.to_sym
