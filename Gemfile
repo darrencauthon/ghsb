@@ -5,6 +5,7 @@ gem 'sinatra'
 gem 'json'
 gem 'haml'
 gem 'octokit'
+gem 'redcarpet'
 gem 'unicorn'
 gem 'sass'
 
@@ -16,4 +17,5 @@ group :development do
   gem 'dotenv'
   gem 'foreman'
   gem 'pry'
+  gem 'shotgun'
 end

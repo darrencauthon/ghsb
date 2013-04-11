@@ -1,0 +1,45 @@
+:markdown
+  # Github API + Panic's Statusboard
+
+  ## How To
+
+  The easiest way to get these into statusboard is to copy & paste the URL
+  once you've checked the response in your browser.
+
+  Any authenticated requests will require a github oauth token, you can
+  create one [manually][oauth].
+
+  We don't store tokens.
+
+  ## Known Issues
+
+  - Results are not cached, so rate limits are a problem
+  - Heroku's 30 second request timeout may affect responses for large requests
+  - This is an expierment. Do not use in production. Do use at your own risk.
+
+  ## Status Board Widgets
+
+  ### Open Issues for a Repo
+
+  ```
+  +---------+-------------------------------+----------+
+  | Issue # | Issue Title                   | Assignee |
+  +---------+-------------------------------+----------+
+  ```
+
+  - Titles will be truncated automagically by statusboard.
+
+  You will need
+
+  -
+  - access to a github repo with open issues
+
+  Visit `/:token/:user/:repo/issues`
+
+  - `:token` is the token you just created
+  - `:user` is the name of the repo owner
+  - `:repo` is the name of the repository
+
+  Tokens are not required for open source repos: `/:user/:repo/issues`
+
+  [oauth]: http://developer.github.com/v3/oauth/#create-a-new-authorization
