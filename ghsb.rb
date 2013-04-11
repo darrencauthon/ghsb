@@ -19,8 +19,10 @@ end
 
 class GhSB < Sinatra::Base
 
+  set :haml, layout: false
+
   get '/' do
-    haml :index
+    haml :index, :layout => :layout
   end
 
   get '/stylesheets/:name.css' do
