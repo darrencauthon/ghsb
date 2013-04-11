@@ -1,0 +1,19 @@
+:sass
+
+  table
+    width: 100%
+
+  td
+    &.number
+      width: 75px
+    &.assignee
+      width: 40px
+      text-align: right
+
+%table
+  - for issue in @issues
+    %tr
+      %td.number== ##{ issue.number }
+      %td.title= issue.title
+      %td.assignee
+        %img{ src: gravatar_for(issue.assignee.gravatar_id) }
