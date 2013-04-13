@@ -1,0 +1,8 @@
+.env
+.rvmrc
+.sass-cache/
+coverage*
+database.yml
+log/*
+Procfile.local
+tmp/*

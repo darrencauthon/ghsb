@@ -1,0 +1,30 @@
+!!!
+%html{ 'xml:lang' => 'en', lang: 'en', xmlns: 'http://www.w3.org/1999/xhtml' }
+
+  %head
+    %meta{ content: 'text/html;charset=UTF-8', 'http-equiv' => 'content-type' }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+
+    = csrf_meta_tag
+    = stylesheet_link_tag    'application'
+    = javascript_include_tag 'application'
+
+    %title
+      Github StatusBoard
+      = yield :title
+
+  %body{ data: { environment: Rails.env }}
+    = render 'navbar'
+
+    .container-fluid
+      %header
+        .row-fluid
+          = yield :header
+
+        .flash
+          - flash.each do |type, message|
+            .alert{ class: "alert-#{ type }" }
+              %button.close{ data: { dismiss: 'alert' }} ×
+              = message
+
+      #content= yield
