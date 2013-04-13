@@ -11,20 +11,21 @@
 
         %ul.nav
           %li.divider-vertical
+          %li= link_to 'known issues', 'https://github.com/bm5k/ghsb/issues'
 
-        %ul.nav.pull-right
-          %li.divider-vertical
-          - if user_signed_in?
-            %li.dropdown
-              = link_to '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
-                = current_user.email
-                %b.caret
-
-              %ul.dropdown-menu
-                %li= link_to 'sign out', destroy_user_session_path, :method => :delete
-
-          - else
-            %li= link_to 'sign in', new_user_session_path
+        -# %ul.nav.pull-right
+        -#   %li.divider-vertical
+        -#   - if user_signed_in?
+        -#     %li.dropdown
+        -#       = link_to '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+        -#         = current_user.email
+        -#         %b.caret
+        -#
+        -#       %ul.dropdown-menu
+        -#         %li= link_to 'sign out', destroy_user_session_path, :method => :delete
+        -#
+        -#   - else
+        -#     %li= link_to 'sign in', new_user_session_path
 
         .nav-collapse
           - if user_signed_in? and current_user.admin?

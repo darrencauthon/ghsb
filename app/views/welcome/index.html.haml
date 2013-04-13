@@ -1,1 +1,39 @@
-%h1 Github StatusBoard
+.row-fluid.markdown
+  :markdown
+    # Github StatusBoard
+    ## How To
+
+    - Click the `open in statusboard` link on the web view for any widget to open it in statusboard.
+    - Any authenticated requests will require a github oauth token, you can create one [manually][oauth].
+    - We do not store tokens.
+    - This is an expierment. Do not use in production. Do use at your own risk.
+
+    ## Widgets
+
+    ### Open Issues for a Specific Repository
+
+    #### Example
+
+    - [rails] (/rails/rails/issues 'issues for rails/rails')
+
+    #### Details
+
+    ```
+    +---------+-------------------------------+----------+
+    | Issue # | Issue Title                   | Assignee |
+    +---------+-------------------------------+----------+
+    ```
+
+    - Titles will be truncated automagically by statusboard.
+
+    Visit `/:token/:user/:repo/issues`
+
+    - `:token` is the token you just created
+    - `:user` is the name of the repo owner
+    - `:repo` is the name of the repository
+
+    Tokens are not required for open source repos: `/:user/:repo/issues`
+
+    <!-- links -->
+    [oauth]: http://developer.github.com/v3/oauth/#create-a-new-authorization
+
