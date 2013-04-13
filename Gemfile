@@ -12,6 +12,7 @@ gem 'pry'
 gem 'pry-doc'
 gem 'pry-rails'
 gem 'rails_admin'
+gem 'redcarpet'
 gem 'sass-rails',     '~> 3.2.3'
 
 group :assets do
