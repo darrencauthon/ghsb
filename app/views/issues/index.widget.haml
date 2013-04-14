@@ -1,0 +1,16 @@
+:sass
+
+  table
+    width: 100%
+
+  td
+
+    &.number
+      width: 128px
+      text-align: center
+
+    &.assignee
+      width:      40px
+      text-align: right
+
+%table= render 'issue', collection: @issues

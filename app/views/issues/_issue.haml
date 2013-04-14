@@ -1,0 +1,7 @@
+- for issue in @issues
+  %tr
+    %td.number== ##{ issue.number }
+    %td.title= issue.title
+    %td.assignee
+      - if issue.assignee
+        %img{ src: gravatar_for(issue.assignee.gravatar_id) }
