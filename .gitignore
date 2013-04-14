@@ -1,4 +1,6 @@
 .env
+.ruby-gemset
+.ruby-version
 .rvmrc
 .sass-cache/
 coverage*
