@@ -48,4 +48,5 @@ group :test do
   gem 'simplecov',          require: false
   gem 'syntax'
   gem 'validation_matcher'
+  gem 'vcr'
 end

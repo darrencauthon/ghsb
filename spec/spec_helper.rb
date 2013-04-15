@@ -30,3 +30,10 @@ RSpec.configure do |config|
   end
 
 end
+
+VCR.configure do |c|
+  c.cassette_library_dir      = 'spec/data'
+  c.configure_rspec_metadata!
+  c.default_cassette_options  = { :record => :new_episodes }
+  c.hook_into                 :faraday
+end

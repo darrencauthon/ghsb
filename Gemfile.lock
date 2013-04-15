@@ -251,6 +251,7 @@ GEM
       activemodel (~> 3)
       activesupport (~> 3)
       rspec (~> 2)
+    vcr (2.4.0)
     warden (1.2.1)
       rack (>= 1.0)
     xpath (2.0.0)
@@ -293,4 +294,5 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   unicorn
   validation_matcher
+  vcr
   yard
