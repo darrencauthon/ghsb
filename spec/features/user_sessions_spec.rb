@@ -9,6 +9,8 @@ describe 'user sessions' do
   describe 'Signing in' do
 
     it 'is linked to from the home page' do
+      pending 'un-pending if user accounts are added'
+
       visit root_path
       should have_css("a[href='#{ new_user_session_path }']")
     end
@@ -16,6 +18,7 @@ describe 'user sessions' do
     describe 'with email' do
 
       before do
+        pending 'un-pending if user accounts are added'
         visit new_user_session_path
       end
 
@@ -37,6 +40,7 @@ describe 'user sessions' do
   describe 'signing out' do
 
     before do
+      pending 'un-pending if user accounts are added'
       login_as user
     end
 
