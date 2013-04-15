@@ -36,4 +36,6 @@ VCR.configure do |c|
   c.configure_rspec_metadata!
   c.default_cassette_options  = { :record => :new_episodes }
   c.hook_into                 :faraday
+
+  c.filter_sensitive_data('<GITHUB_TOKEN>') { ENV['GITHUB_TOKEN'] }
 end

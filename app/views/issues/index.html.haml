@@ -2,5 +2,11 @@
   %p= link_to 'open in status board', widget_link, class: 'btn btn-primary btn-large'
 
 .row-fluid
-  %table.table.table-bordered.table-condensed.table-hover
+  %table.issues.table.table-bordered.table-condensed.table-hover
+    %thead
+      %tr
+        %th.number Number
+        %th.title Title
+        %th.assignee Assignee
+
     = render 'issue', collection: @issues

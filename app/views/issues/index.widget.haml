@@ -13,4 +13,5 @@
       width:      40px
       text-align: right
 
-%table= render 'issue', collection: @issues
+%table.issues
+  %tbody= render 'issue', collection: @issues
