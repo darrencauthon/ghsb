@@ -64,6 +64,8 @@ GEM
       warden (~> 1.2.1)
     diff-lcs (1.2.3)
     dotenv (0.6.0)
+    dotenv-rails (0.6.0)
+      dotenv (= 0.6.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
@@ -264,7 +266,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   database_cleaner
   devise
-  dotenv
+  dotenv-rails
   factory_girl_rails
   foreman
   haml-rails

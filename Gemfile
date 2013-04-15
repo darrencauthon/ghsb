@@ -28,13 +28,13 @@ group :production do
 end
 
 group :development do
-  gem 'dotenv'
   gem 'foreman'
   gem 'passenger'
   gem 'yard'
 end
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'pry-debugger'
 end
