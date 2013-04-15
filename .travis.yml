@@ -1,0 +1,21 @@
+language: ruby
+
+rvm:
+  - 1.9.3
+  - 2.0.0
+
+env:
+  - DB=mysql
+  - DB=postgresql
+  global:
+    secure: "nx/cFV9nSOBjchg+v6jNt/9zVUcwPUG4rPftO9afK2fSyKFGTB17hWeu0M48\nKzft9L2spjbjqhJ9ipQWw0Ee25bgG+xlFRVdq2Exig0JmkC3Pmz2Hbhb0INS\nZf13et6X49UjbTV9lOAE2+y7H1WO0TYo4dE9zKi3BR8SuWhQWDU="
+    secure: "Tikl69A6DFMH/m5INOyyrI886uDWfY02i0Vp+XFeFE0hJ13jz4FbpZeQzNWl\nqwgLCI+DAPVMgWmBWzkEUKK5dPDwmHqdH0dHuKilGdCoMIEKetC52vVMcEVE\n3YQ4KWcad6+yiZOEibu36G78pnWReoTVEdHBDRfI5Uelc1pH4HA="
+
+bundler_args: --without development production
+
+before_script:
+  - curl -L http://git.io/YLiX3g -o ./config/database.yml
+  - bundle exec rake db:setup
+
+script:
+  - RAILS_ENV=test bundle exec rspec spec
