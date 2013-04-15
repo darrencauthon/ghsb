@@ -1,5 +1,6 @@
 require 'capybara/rails'
 require 'capybara/rspec'
+require 'capybara/poltergeist'
 
 # fill_in_fields user_email: 'bob@smith.com'
 # fill_in_fields :user, email: 'bob@smith.com'

@@ -8,9 +8,10 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'rails/application'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
-require 'capybara/rspec'
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+
+Capybara.javascript_driver = :poltergeist
 
 RSpec.configure do |config|
   config.filter_run focus: true
