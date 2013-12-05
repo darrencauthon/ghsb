@@ -16,6 +16,8 @@ gem 'rails_admin'
 gem 'redcarpet'
 gem 'sass-rails',     '~> 3.2.3'
 
+gem 'panic_board_data'
+
 group :assets do
   gem 'coffee-rails',    '~> 3.2.1'
   gem 'jquery-ui-rails'
