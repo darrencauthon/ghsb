@@ -1,6 +1,8 @@
 class MilestonesController < ApplicationController
   include ActionView::Helpers::DateHelper
 
+  before_filter { @panel_type = 'table' }
+
   def index
     @milestones = Milestone.for params
     @show_due_column = @milestones.select { |m| m.due_on }.any?
