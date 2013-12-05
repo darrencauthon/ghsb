@@ -1,0 +1,22 @@
+.row-fluid
+  %p= link_to 'open in status board', widget_link, class: 'btn btn-primary btn-large'
+
+.row-fluid
+  %table.milestones.table.table-bordered.table-condensed.table-hover
+    %thead
+      %tr
+        %th.number Number
+        %th.title Title
+        - if @show_due_column
+          %th.due Due
+        %th.progress Progress
+      - @milestones.each do |milestone|
+        %tr
+          %td.number== ##{ milestone.number }
+          %td.title= milestone.title
+
+          - if @show_due_column
+            %td.due
+              - if milestone.due_on
+                = time_ago_in_words(milestone.due_on)
+          %td.progress== #{ milestone.closed_issues } / #{ milestone.closed_issues + milestone.open_issues }
