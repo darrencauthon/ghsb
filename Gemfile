@@ -16,7 +16,7 @@ gem 'rails_admin'
 gem 'redcarpet'
 gem 'sass-rails',     '~> 3.2.3'
 
-gem 'panic_board_data'
+gem 'panic_board_data', '>= 1.0'
 
 group :assets do
   gem 'coffee-rails',    '~> 3.2.1'
