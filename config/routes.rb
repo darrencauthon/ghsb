@@ -4,6 +4,8 @@ GithubStatusBoard::Application.routes.draw do
 
   get '/(:token)/(:user/:repo)/milestones' => 'milestones#index', as: 'milestones'
 
+  get '/(:token)/(:user/:repo)/stars' => 'stars#index', as: 'stars'
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
